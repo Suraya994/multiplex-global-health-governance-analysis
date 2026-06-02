@@ -1,0 +1,21 @@
+# R package requirements for the analysis pipeline
+tidyverse
+data.table
+WDI
+countrycode
+igraph
+plm
+lmtest
+sandwich
+modelsummary
+fixest
+network
+networkDynamic
+tergm
+btergm
+statnet
+ggplot2
+ggrepel
+patchwork
+readxl
+janitor
