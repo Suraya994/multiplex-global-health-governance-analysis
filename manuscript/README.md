@@ -1,5 +1,13 @@
-# Manuscript
+# Manuscript Materials
 
-This folder contains manuscript drafts associated with the replication package.
+This folder stores manuscript-related public materials associated with the
+replication package.
 
-For public release, keep only the version you want reviewers or readers to see.
+Included file:
+
+```text
+bazarova_integration_without_equalization_public_version.pdf
+```
+
+Private correspondence, internal notes, and machine-specific working files are
+not part of the public release.

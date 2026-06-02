@@ -10,7 +10,7 @@ split_figures_test/
 ~$*
 *.tmp
 *.log
-00_CURRENT_SOURCE_DERGI_PAKETI/
+local_source_bundle/
 r_libs/
 renv/library/
 renv/staging/

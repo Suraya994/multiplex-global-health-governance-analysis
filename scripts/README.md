@@ -1,6 +1,6 @@
 # Scripts
 
-This folder contains auxiliary scripts that support journal-ready output
+This folder contains auxiliary scripts that support publication-grade output
 generation.
 
 ## Split Figures
@@ -8,7 +8,7 @@ generation.
 Generate standalone PNG and vector PDF panels from the 100-country datasets:
 
 ```bash
-python scripts/split_figures_journal.py \
+python scripts/publication_figure_panels.py \
   --data-dir data \
   --output-dir split_figures \
   --seed 42 \
@@ -18,7 +18,7 @@ python scripts/split_figures_journal.py \
 For a quick smoke test, reduce bootstrap and permutation settings:
 
 ```bash
-python scripts/split_figures_journal.py \
+python scripts/publication_figure_panels.py \
   --data-dir data \
   --output-dir split_figures_test \
   --n-boot 20 \

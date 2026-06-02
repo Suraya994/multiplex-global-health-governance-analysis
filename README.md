@@ -17,12 +17,12 @@ structural hierarchy remains durable.
 ```text
 .
 ├── R/              # Main R analysis pipeline
-├── scripts/        # Auxiliary Python scripts for journal-ready figures
+├── scripts/        # Auxiliary Python scripts for publication-grade figures
 ├── data/           # 100-country processed panels and network data
 ├── results/        # Model outputs, diagnostics, and audit reports
 ├── figures/        # Publication figures
-├── manuscript/     # Manuscript files
-├── docs/           # Package notes and original manifest
+├── manuscript/     # Manuscript materials and release notes
+├── docs/           # Reproducibility notes
 ├── README.md
 ├── requirements.txt
 ├── requirements-python.txt
@@ -113,13 +113,15 @@ io_placebo_falsification_results.txt
 
 Publication figures are stored in `figures/`.
 
-## Journal Split Figures
+The public manuscript version is stored in `manuscript/`.
+
+## Publication Figure Panels
 
 The auxiliary split-figure script exports each dashboard panel as a standalone
 PNG and vector PDF:
 
 ```bash
-python scripts/split_figures_journal.py \
+python scripts/publication_figure_panels.py \
   --data-dir data \
   --output-dir split_figures \
   --seed 42 \
@@ -129,7 +131,7 @@ python scripts/split_figures_journal.py \
 For a quick smoke test:
 
 ```bash
-python scripts/split_figures_journal.py \
+python scripts/publication_figure_panels.py \
   --data-dir data \
   --output-dir split_figures_test \
   --n-boot 20 \
@@ -145,10 +147,17 @@ python scripts/split_figures_journal.py \
 - Data files are processed research panels. When rebuilding from raw external
   sources, users may need current access to World Bank, UN, WHO, and CEPII data
   endpoints.
-- The original working bundle contained local R libraries and temporary files;
-  those were intentionally excluded from this public repository.
-- Before journal submission or public archival deposit, verify that each included
+- Local package caches, environment-specific files, and machine-specific working
+  artifacts are intentionally excluded from this public repository.
+- Before public archival release, verify that each included
   dataset is legally shareable under its source terms.
+
+## Public Release Scope
+
+This public repository includes the reproducible analysis infrastructure,
+processed 100-country panels, model outputs, and figure-generation code. Internal
+drafts, private working notes, and non-public correspondence are intentionally
+excluded.
 
 ## Article
 
