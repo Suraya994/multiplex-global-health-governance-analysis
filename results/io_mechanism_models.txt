@@ -1,0 +1,42 @@
+OLS estimation, Dep. Var.: eigen
+Observations: 2,000
+Fixed-effects: iso3c: 100,  year: 20
+Standard-errors: Clustered (iso3c) 
+                   Estimate Std. Error   t value Pr(>|t|)    
+l_health_spending -0.005314   0.008563 -0.620574 0.536306    
+l_physicians       0.007713   0.020803  0.370771 0.711601    
+l_hospital_beds   -0.020860   0.012489 -1.670314 0.098016 .  
+l_log_gdp_pc      -0.052523   0.050421 -1.041700 0.300088    
+l_internet        -0.000671   0.000704 -0.952174 0.343328    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.164511     Adj. R2: 0.484646
+                 Within R2: 0.008312
+OLS estimation, Dep. Var.: life_expectancy
+Observations: 2,000
+Fixed-effects: iso3c: 100,  year: 20
+Standard-errors: Clustered (iso3c) 
+                   Estimate Std. Error   t value   Pr(>|t|)    
+l_eigen           -0.013088   0.257768 -0.050775 0.95960693    
+l_health_spending -0.585547   0.148053 -3.954973 0.00014391 ***
+l_log_gdp_pc       0.558284   0.844584  0.661016 0.51013718    
+l_internet        -0.001333   0.009778 -0.136339 0.89182988    
+l_hospital_beds    0.206326   0.116162  1.776195 0.07877288 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.09316     Adj. R2: 0.977219
+                Within R2: 0.15427 
+OLS estimation, Dep. Var.: eigen
+Observations: 2,000
+Fixed-effects: iso3c: 100,  year: 20
+Standard-errors: Clustered (iso3c) 
+                    Estimate Std. Error   t value   Pr(>|t|)    
+l_log_gdp_pc        0.311492   0.081395  3.826902 2.2737e-04 ***
+l_health_spending  -0.009853   0.009180 -1.073356 2.8572e-01    
+l_internet         -0.000013   0.000672 -0.018715 9.8511e-01    
+south:l_log_gdp_pc -0.454017   0.086840 -5.228211 9.5432e-07 ***
+... 1 variable was removed because of collinearity (south)
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.162332     Adj. R2: 0.498472
+                 Within R2: 0.034403

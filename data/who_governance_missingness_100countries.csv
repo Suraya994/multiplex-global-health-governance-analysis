@@ -1,0 +1,13 @@
+indicator_code,n_total,missing,non_missing,missing_ratio,indicator_label
+GHED_EXT_pc_PPP_SHA2011,2100,2100,0,1,External health expenditure per capita in PPP international dollars
+UHC_AVAILABILITY_SCORE,2100,2000,100,0.9523809523809523,Primary data availability for UHC service coverage index
+SDGIHR2018,2100,1813,287,0.8633333333333333,IHR SPAR first edition average core capacity score
+SDGIHR2021,2100,1702,398,0.8104761904761905,IHR SPAR second edition average core capacity score
+UHC_IHR,2100,1541,559,0.7338095238095238,Compliance with international health regulations
+SDGIHR,2100,1455,645,0.6928571428571428,Average of 13 International Health Regulations core capacity scores
+GHED_EXTCHE_SHA2011,2100,106,1994,0.05047619047619047,External health expenditure as percentage of current health expenditure
+UHC_INDEX_REPORTED,2100,100,2000,0.047619047619047616,UHC service coverage index
+UHC_SCI_CAPACITY,2100,100,2000,0.047619047619047616,UHC service coverage sub-index on service capacity and access
+UHC_SCI_INFECT,2100,100,2000,0.047619047619047616,UHC service coverage sub-index on infectious diseases
+UHC_SCI_NCD,2100,100,2000,0.047619047619047616,UHC service coverage sub-index on noncommunicable diseases
+UHC_SCI_RMNCH,2100,100,2000,0.047619047619047616,"UHC service coverage sub-index on reproductive, maternal, newborn and child health"

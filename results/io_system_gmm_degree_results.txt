@@ -1,0 +1,53 @@
+Twoways effects Two-steps model System GMM 
+
+Call:
+pgmm(formula = life_expectancy ~ lag(life_expectancy, 1) + lag(degree, 
+    1) + health_spending + log_gdp_pc + log_population + internet | 
+    lag(life_expectancy, 2:4) + lag(degree, 2:4), data = df, 
+    effect = "twoways", model = "twosteps", transformation = "ld", 
+    index = c("iso3c", "year"))
+
+Balanced Panel: n = 100, T = 21, N = 2100
+
+Number of Observations Used: 3900
+Residuals:
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+-6.428422 -0.202588  0.008644 -0.003858  0.225409 12.076910 
+
+Coefficients:
+                          Estimate Std. Error z-value  Pr(>|z|)    
+lag(life_expectancy, 1)  0.9085512  0.0171984 52.8276 < 2.2e-16 ***
+lag(degree, 1)           2.6800947  5.4609921  0.4908  0.623589    
+health_spending          0.0118586  0.0174928  0.6779  0.497826    
+log_gdp_pc               0.2520777  0.0933458  2.7005  0.006924 ** 
+log_population          -0.0179674  0.0288505 -0.6228  0.533431    
+internet                 0.0067761  0.0026622  2.5453  0.010920 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Sargan test: chisq(148) = 68.14873 (p-value = 1)
+Autocorrelation test (1): normal = -5.372317 (p-value = 7.7731e-08)
+Autocorrelation test (2): normal = -1.019466 (p-value = 0.30798)
+Wald test for coefficients: chisq(6) = 30735.43 (p-value = < 2.22e-16)
+Wald test for time dummies: chisq(19) = 146.381 (p-value = < 2.22e-16)
+
+	Arellano-Bond autocorrelation test of degree 1
+
+data:  life_expectancy ~ lag(life_expectancy, 1) + lag(degree, 1) +  ...
+normal = -5.3914, p-value = 6.992e-08
+alternative hypothesis: autocorrelation present
+
+
+	Arellano-Bond autocorrelation test of degree 2
+
+data:  life_expectancy ~ lag(life_expectancy, 1) + lag(degree, 1) +  ...
+normal = -1.021, p-value = 0.3073
+alternative hypothesis: autocorrelation present
+
+
+	Sargan test
+
+data:  life_expectancy ~ lag(life_expectancy, 1) + lag(degree, 1) +  ...
+chisq = 68.149, df = 148, p-value = 1
+alternative hypothesis: overidentifying restrictions not valid
+

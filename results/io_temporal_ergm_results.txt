@@ -1,0 +1,17 @@
+Call:
+tergm(formula = networks ~ Form(~edges + gwesp(0.5, fixed = TRUE)) + 
+    Persist(~edges), estimate = "CMLE")
+
+Monte Carlo Conditional Maximum Likelihood Results:
+
+                        Estimate Std. Error MCMC % z value Pr(>|z|)    
+Form(1)~edges           -8.01771    0.11741      0  -68.29   <1e-04 ***
+Form(1)~gwesp.fixed.0.5  2.81720    0.06751      0   41.73   <1e-04 ***
+Persist(1)~edges         1.65057    0.03412      0   48.37   <1e-04 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+     Null Deviance: 137243  on 99000  degrees of freedom
+ Residual Deviance:  14230  on 98997  degrees of freedom
+ 
+AIC: 14236  BIC: 14264  (Smaller is better. MC Std. Err. = 6.591)

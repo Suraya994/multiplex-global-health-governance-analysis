@@ -1,0 +1,17 @@
+OLS estimation, Dep. Var.: life_expectancy
+Observations: 2,000
+Fixed-effects: iso3c: 100,  year: 20
+Standard-errors: Clustered (iso3c) 
+                 Estimate Std. Error   t value   Pr(>|t|)    
+l_eigen         -0.073258   0.254618 -0.287715 0.77416619    
+health_spending -0.588013   0.156075 -3.767514 0.00028019 ***
+log_gdp_pc       0.508358   0.869753  0.584486 0.56022326    
+internet         0.004849   0.009854  0.492089 0.62374611    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.0996     Adj. R2: 0.976963
+               Within R2: 0.144276
+# A tibble: 1 × 4
+  actual_beta placebo_mean placebo_sd empirical_p
+        <dbl>        <dbl>      <dbl>       <dbl>
+1     -0.0733      0.00807      0.107       0.435

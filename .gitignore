@@ -1,0 +1,16 @@
+.DS_Store
+*.Rhistory
+*.RData
+*.Rproj.user/
+__pycache__/
+*.pyc
+split_figures/
+split_figures_test/
+*.egg-info/
+~$*
+*.tmp
+*.log
+00_CURRENT_SOURCE_DERGI_PAKETI/
+r_libs/
+renv/library/
+renv/staging/

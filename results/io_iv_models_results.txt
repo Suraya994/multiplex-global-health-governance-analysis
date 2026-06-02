@@ -1,0 +1,196 @@
+IV: First stage: l_eigen
+TSLS estimation
+|- D.V.   : life_expectancy
+|- Endo.  : l_eigen
+|- Instr. : l_iv_distance_weighted_peer_eigen
+|
+|=> First Stage
+|   Current Dep. Var.: l_eigen
+Observations: 1,980
+Fixed-effects: iso3c: 99,  year: 20
+Standard-errors: Clustered (iso3c) 
+                                   Estimate Std. Error  t value  Pr(>|t|)    
+l_iv_distance_weighted_peer_eigen -4.329501   4.156103 -1.04172 0.3001040    
+health_spending                   -0.013322   0.008161 -1.63240 0.1058054    
+log_gdp_pc                        -0.110452   0.059621 -1.85255 0.0669558 .  
+log_population                    -0.283193   0.085141 -3.32615 0.0012403 ** 
+internet                          -0.000695   0.000670 -1.03654 0.3025004    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.163495     Adj. R2: 0.505243
+                 Within R2: 0.022315
+F-test (1st stage): stat = 9.9584, p = 0.001626, on 1 and 1,955 DoF.
+
+IV: Second stage
+TSLS estimation
+|- D.V.   : life_expectancy
+|- Endo.  : l_eigen
+|- Instr. : l_iv_distance_weighted_peer_eigen
+|
+|=> Second Stage
+|   Dep. Var.: life_expectancy
+Observations: 1,980
+Fixed-effects: iso3c: 99,  year: 20
+Standard-errors: Clustered (iso3c) 
+                 Estimate Std. Error   t value  Pr(>|t|)    
+fit_l_eigen     -2.092500   4.350228 -0.481009 0.6315821    
+health_spending -0.513421   0.172188 -2.981747 0.0036157 ** 
+log_gdp_pc       1.383780   0.859621  1.609757 0.1106676    
+log_population   5.002320   1.747155  2.863122 0.0051306 ** 
+internet        -0.006799   0.010432 -0.651718 0.5161089    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.10677     Adj. R2: 0.97952
+                Within R2: 0.23863
+F-test (1st stage), l_eigen: stat = 9.9584, p = 0.001626, on 1 and 1,955 DoF.
+                 Wu-Hausman: stat = 1.2278, p = 0.267987, on 1 and 1,856 DoF.
+F-test (1st stage), l_eigen: stat = 9.9584, p = 0.001626, on 1 and 1,955 DoF.
+Wald (1st stage), l_eigen  : stat = 1.0852, p = 0.29767 , on 1 and 1,955 DoF, VCOV: Clustered (iso3c).
+                 Wu-Hausman: stat = 1.2278, p = 0.267987, on 1 and 1,856 DoF.
+IV: First stage: l_eigen
+TSLS estimation
+|- D.V.   : life_expectancy
+|- Endo.  : l_eigen
+|- Instr. : l_iv_language_peer_eigen
+|
+|=> First Stage
+|   Current Dep. Var.: l_eigen
+Observations: 1,600
+Fixed-effects: iso3c: 80,  year: 20
+Standard-errors: Clustered (iso3c) 
+                          Estimate Std. Error   t value   Pr(>|t|)    
+l_iv_language_peer_eigen  0.584164   0.139461  4.188743 7.2421e-05 ***
+health_spending          -0.015282   0.007326 -2.085965 4.0209e-02 *  
+log_gdp_pc               -0.159336   0.056090 -2.840717 5.7230e-03 ** 
+log_population           -0.172117   0.079968 -2.152318 3.4425e-02 *  
+internet                  0.000160   0.000717  0.222621 8.2440e-01    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.152621     Adj. R2: 0.575118
+                 Within R2: 0.136821
+F-test (1st stage): stat = 212.43, p < 2.2e-16, on 1 and 1,575 DoF.
+
+IV: Second stage
+TSLS estimation
+|- D.V.   : life_expectancy
+|- Endo.  : l_eigen
+|- Instr. : l_iv_language_peer_eigen
+|
+|=> Second Stage
+|   Dep. Var.: life_expectancy
+Observations: 1,600
+Fixed-effects: iso3c: 80,  year: 20
+Standard-errors: Clustered (iso3c) 
+                 Estimate Std. Error   t value   Pr(>|t|)    
+fit_l_eigen      0.564927   0.556884  1.014443 0.31346827    
+health_spending -0.577416   0.175236 -3.295072 0.00147474 ** 
+log_gdp_pc       1.620324   0.888904  1.822834 0.07211191 .  
+log_population   6.358675   1.628565  3.904464 0.00019771 ***
+internet        -0.005120   0.011594 -0.441575 0.66000340    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.08302     Adj. R2: 0.980108
+                Within R2: 0.286261
+F-test (1st stage), l_eigen: stat = 212.4345, p < 2.2e-16 , on 1 and 1,575 DoF.
+                 Wu-Hausman: stat =   1.2774, p = 0.258572, on 1 and 1,495 DoF.
+F-test (1st stage), l_eigen: stat = 212.4345, p < 2.2e-16 , on 1 and 1,575 DoF.
+Wald (1st stage), l_eigen  : stat =  17.5456, p = 2.96e-5 , on 1 and 1,575 DoF, VCOV: Clustered (iso3c).
+                 Wu-Hausman: stat =   1.2774, p = 0.258572, on 1 and 1,495 DoF.
+IV: First stage: l_eigen
+TSLS estimation
+|- D.V.   : life_expectancy
+|- Endo.  : l_eigen
+|- Instr. : l_iv_historical_peer_eigen
+|
+|=> First Stage
+|   Current Dep. Var.: l_eigen
+Observations: 1,800
+Fixed-effects: iso3c: 90,  year: 20
+Standard-errors: Clustered (iso3c) 
+                            Estimate Std. Error   t value  Pr(>|t|)    
+l_iv_historical_peer_eigen  0.640428   0.130101  4.922549 0.0000039 ***
+health_spending            -0.015064   0.009023 -1.669482 0.0985359 .  
+log_gdp_pc                 -0.114982   0.070607 -1.628485 0.1069569    
+log_population             -0.206138   0.085712 -2.405015 0.0182428 *  
+internet                   -0.000037   0.000707 -0.052025 0.9586251    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.153446     Adj. R2: 0.56471 
+                 Within R2: 0.152053
+F-test (1st stage): stat = 278.86, p < 2.2e-16, on 1 and 1,775 DoF.
+
+IV: Second stage
+TSLS estimation
+|- D.V.   : life_expectancy
+|- Endo.  : l_eigen
+|- Instr. : l_iv_historical_peer_eigen
+|
+|=> Second Stage
+|   Dep. Var.: life_expectancy
+Observations: 1,800
+Fixed-effects: iso3c: 90,  year: 20
+Standard-errors: Clustered (iso3c) 
+                 Estimate Std. Error   t value Pr(>|t|)    
+fit_l_eigen      0.520635   0.468867  1.110410 0.269813    
+health_spending -0.512595   0.166975 -3.069896 0.002839 ** 
+log_gdp_pc       1.085881   0.811596  1.337958 0.184319    
+log_population   5.331372   1.547074  3.446099 0.000870 ***
+internet        -0.001638   0.011613 -0.141037 0.888159    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.06448     Adj. R2: 0.978836
+                Within R2: 0.223475
+F-test (1st stage), l_eigen: stat = 278.86312, p < 2.2e-16 , on 1 and 1,775 DoF.
+                 Wu-Hausman: stat =   0.40283, p = 0.525719, on 1 and 1,685 DoF.
+F-test (1st stage), l_eigen: stat = 278.86312, p < 2.2e-16 , on 1 and 1,775 DoF.
+Wald (1st stage), l_eigen  : stat =  24.23149, p = 9.334e-7, on 1 and 1,775 DoF, VCOV: Clustered (iso3c).
+                 Wu-Hausman: stat =   0.40283, p = 0.525719, on 1 and 1,685 DoF.
+IV: First stage: l_eigen
+TSLS estimation
+|- D.V.   : life_expectancy
+|- Endo.  : l_eigen
+|- Instr. : l_iv_contiguous_peer_eigen
+|
+|=> First Stage
+|   Current Dep. Var.: l_eigen
+Observations: 1,740
+Fixed-effects: iso3c: 87,  year: 20
+Standard-errors: Clustered (iso3c) 
+                            Estimate Std. Error   t value   Pr(>|t|)    
+l_iv_contiguous_peer_eigen  0.651233   0.066591  9.779599 1.2755e-15 ***
+health_spending            -0.018046   0.008932 -2.020358 4.6458e-02 *  
+log_gdp_pc                 -0.040151   0.067754 -0.592603 5.5500e-01    
+log_population             -0.161837   0.062756 -2.578828 1.1614e-02 *  
+internet                    0.000420   0.000649  0.647838 5.1882e-01    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 0.140458     Adj. R2: 0.633057
+                 Within R2: 0.293326
+F-test (1st stage): stat = 665.29, p < 2.2e-16, on 1 and 1,715 DoF.
+
+IV: Second stage
+TSLS estimation
+|- D.V.   : life_expectancy
+|- Endo.  : l_eigen
+|- Instr. : l_iv_contiguous_peer_eigen
+|
+|=> Second Stage
+|   Dep. Var.: life_expectancy
+Observations: 1,740
+Fixed-effects: iso3c: 87,  year: 20
+Standard-errors: Clustered (iso3c) 
+                 Estimate Std. Error   t value   Pr(>|t|)    
+fit_l_eigen      0.225121   0.350661  0.641991 0.52258665    
+health_spending -0.499565   0.171677 -2.909918 0.00460139 ** 
+log_gdp_pc       1.766135   0.794329  2.223431 0.02880814 *  
+log_population   5.890410   1.478175  3.984921 0.00014098 ***
+internet        -0.005675   0.010675 -0.531585 0.59638404    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 1.06426     Adj. R2: 0.978496
+                Within R2: 0.255188
+F-test (1st stage), l_eigen: stat = 665.28841, p < 2.2e-16 , on 1 and 1,715 DoF.
+                 Wu-Hausman: stat =   0.02782, p = 0.867562, on 1 and 1,628 DoF.
+F-test (1st stage), l_eigen: stat = 665.28841, p < 2.2e-16 , on 1 and 1,715 DoF.
+Wald (1st stage), l_eigen  : stat =  95.64055, p < 2.2e-16 , on 1 and 1,715 DoF, VCOV: Clustered (iso3c).
+                 Wu-Hausman: stat =   0.02782, p = 0.867562, on 1 and 1,628 DoF.

@@ -1,0 +1,53 @@
+Twoways effects Two-steps model System GMM 
+
+Call:
+pgmm(formula = life_expectancy ~ lag(life_expectancy, 1) + lag(eigen, 
+    1) + health_spending + log_gdp_pc + log_population + internet | 
+    lag(life_expectancy, 2:4) + lag(eigen, 2:4), data = df, effect = "twoways", 
+    model = "twosteps", transformation = "ld", index = c("iso3c", 
+        "year"))
+
+Balanced Panel: n = 100, T = 21, N = 2100
+
+Number of Observations Used: 3900
+Residuals:
+     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
+-6.471916 -0.195104  0.009398 -0.003885  0.212004 12.154504 
+
+Coefficients:
+                          Estimate Std. Error z-value Pr(>|z|)    
+lag(life_expectancy, 1)  0.9210860  0.0157251 58.5743  < 2e-16 ***
+lag(eigen, 1)            0.1158634  0.1332857  0.8693  0.38469    
+health_spending          0.0080458  0.0160261  0.5020  0.61564    
+log_gdp_pc               0.2244161  0.0955941  2.3476  0.01890 *  
+log_population          -0.0131114  0.0280936 -0.4667  0.64071    
+internet                 0.0055965  0.0024146  2.3178  0.02046 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Sargan test: chisq(148) = 80.72001 (p-value = 1)
+Autocorrelation test (1): normal = -4.837089 (p-value = 1.3175e-06)
+Autocorrelation test (2): normal = -1.024698 (p-value = 0.30551)
+Wald test for coefficients: chisq(6) = 26575.19 (p-value = < 2.22e-16)
+Wald test for time dummies: chisq(19) = 123.1475 (p-value = < 2.22e-16)
+
+	Arellano-Bond autocorrelation test of degree 1
+
+data:  life_expectancy ~ lag(life_expectancy, 1) + lag(eigen, 1) + health_spending +  ...
+normal = -4.85, p-value = 1.235e-06
+alternative hypothesis: autocorrelation present
+
+
+	Arellano-Bond autocorrelation test of degree 2
+
+data:  life_expectancy ~ lag(life_expectancy, 1) + lag(eigen, 1) + health_spending +  ...
+normal = -1.0264, p-value = 0.3047
+alternative hypothesis: autocorrelation present
+
+
+	Sargan test
+
+data:  life_expectancy ~ lag(life_expectancy, 1) + lag(eigen, 1) + health_spending +  ...
+chisq = 80.72, df = 148, p-value = 1
+alternative hypothesis: overidentifying restrictions not valid
+

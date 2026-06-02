@@ -1,0 +1,11 @@
+indicator,label,n_total,missing,non_missing,missing_ratio,decision
+SE.ADT.LITR.ZS,Adult literacy rate,2100,1565,535,0.745,Ana modelden cikar; veri eksigi cok yuksek
+GB.XPD.RSDV.GD.ZS,R&D expenditure (% of GDP),2100,708,1392,0.337,Ek analiz veya robustness icin uygun
+SH.MED.PHYS.ZS,"Physicians per 1,000 people",2100,569,1531,0.271,Ana analizde dikkatli / imputasyon veya saglamlik kontrolu
+SH.MED.NUMW.P3,"Nurses and midwives per 1,000 people",2100,557,1543,0.265,Ana analizde dikkatli / imputasyon veya saglamlik kontrolu
+SH.MED.BEDS.ZS,"Hospital beds per 1,000 people",2100,484,1616,0.230,Ana analizde dikkatli / imputasyon veya saglamlik kontrolu
+SH.XPD.CHEX.GD.ZS,Current health expenditure (% of GDP),2100,84,2016,0.040,Ana analiz icin guclu
+IT.NET.USER.ZS,Individuals using the Internet (%),2100,14,2086,0.007,Ana analiz icin guclu
+NY.GDP.PCAP.PP.KD,"GDP per capita, PPP (constant international $)",2100,0,2100,0.000,Ana analiz icin guclu
+SP.DYN.LE00.IN,Life expectancy at birth,2100,0,2100,0.000,Ana analiz icin guclu
+SP.POP.TOTL,"Population, total",2100,0,2100,0.000,Ana analiz icin guclu
